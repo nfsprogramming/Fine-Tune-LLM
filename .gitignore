@@ -1,0 +1,76 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+
+# C extensions / distribution
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Secrets & Environment variables
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Model weights & local vector database (too large for git)
+models/
+qdrant_db/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+
+# Training artifacts & checkpoint binaries
+results/checkpoint-*/optimizer.pt
+results/checkpoint-*/rng_state.pth
+results/checkpoint-*/scheduler.pt
+results/checkpoint-*/training_args.bin
+results/checkpoint-*/tokenizer.json
+results/checkpoint-*/adapter_model.safetensors
+qlora-agent-adapter/
+qlora-adapter/
+
+# Large datasets & downloaded mirrors
+data/agentic_dataset_hf.jsonl
+agentic_dataset_hf.jsonl
+
+# Git bundles and test caches
+*.bundle
+.pytest_cache/
+.coverage
+htmlcov/

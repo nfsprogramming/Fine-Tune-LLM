@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fine-tune-llm"
+version = "0.1.0"
+description = "Self-hosted AI coding agent: QLoRA fine-tuning, RAG repository intelligence, and autonomous software engineering loop."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "nfsprogramming", email = "mohammed.nifras.000555@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "transformers",
+    "accelerate",
+    "peft",
+    "bitsandbytes",
+    "trl",
+    "datasets",
+    "qdrant-client"
+]
+keywords = [
+    "ai-agent",
+    "code-generation",
+    "fine-tuning",
+    "llm",
+    "qlora",
+    "qwen",
+    "rag",
+    "self-hosted"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Code Generators"
+]
+
+[project.urls]
+Repository = "https://github.com/nfsprogramming/Fine-Tune-LLM.git"
+Issues = "https://github.com/nfsprogramming/Fine-Tune-LLM/issues"

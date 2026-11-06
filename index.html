@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent Online</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background-color: linear-gradient(to bottom, #2a3645, #7d9cbb);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1em;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            z-index: 100;
+        }
+
+        h1 {
+            font-size: 2rem;
+            animation: glow 2s infinite ease-in-out;
+        }
+
+        @keyframes glow {
+            from {text-shadow: 0 0 5px #ff7f50; }
+            to {text-shadow: 0 0 10px #ff7f50; }
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            outline: none;
+            background-color: #2a3645;
+            color: white;
+        }
+
+        .button:hover {
+            background-color: #7d9cbb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span style="color: #ff7f50;">AI Agent Online</span></h1>
+    </header>
+
+    <div class="orb"></div>
+
+    <button class="button">Start Chat</button>
+
+    <script>
+        const orb = document.querySelector('.orb');
+        const button = document.querySelector('.button');
+
+        function animateOrb() {
+            const angle = Math.random() * 360;
+            const x = Math.cos(angle) * 100 + window.innerWidth / 2;
+            const y = Math.sin(angle) * 100 + window.innerHeight / 2;
+
+            orb.style.left = `${x}px`;
+            orb.style.top = `${y}px`;
+
+            setTimeout(() => animateOrb(), 100);
+        }
+
+        function startChat() {
+            alert('Starting chat...');
+            // Logic to start a conversation here
+        }
+
+        animateOrb();
+        button.addEventListener('click', startChat);
+    </script>
+
+</body>
+</html>
